@@ -1,7 +1,7 @@
 #ifndef CLIENTHEAD
 #define CLIENTHEAD
 
-#include "clienthead.h"
+#include "libs.h"
 
 //////////////////// класс Client (клиенты) //////////////////
 //Он хранит имя клиента и его телефонный номер.
