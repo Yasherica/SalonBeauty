@@ -2,7 +2,7 @@
 #define CLIENTHEAD
 
 #include "libs.h"
-
+using namespace std;
 //////////////////// класс Client (клиенты) //////////////////
 //Он хранит имя клиента и его телефонный номер.
 class Client
@@ -16,7 +16,7 @@ int data;//
 int sum;//
 string comment;//
 public:
-Client(string n, int aNo);
+Client(string n, int Num, string Serv, string Mas, int DT, int SM, string comm);
 ~Client();
 string getName(); //возвращает имя клиента
 int getNumber(); //возвращает номер телефона клиента

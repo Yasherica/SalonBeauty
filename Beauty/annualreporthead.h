@@ -1,8 +1,8 @@
-#ifndef ANNUALREPORT_H
-#define ANNUALREPORT_H
+#ifndef ANNUALREPORTHEAD_H
+#define ANNUALREPORTHEAD_H
 
 #include "libs.h"
-
+using namespace std;
 //////////////////// Класс годового отчета //////////////////
 class AnnualReport
 {
@@ -16,5 +16,5 @@ AnnualReport(IncomeTable*, ExpenseTable*);
 void display(); // отображение годового отчета
 };
 
-#endif // ANNUALREPORT_H
+#endif // ANNUALREPORTHEAD_H
 
