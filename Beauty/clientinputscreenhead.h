@@ -2,8 +2,7 @@
 #define CLIENTINPUTSCREENHEAD
 
 #include "clienttablehead.h"
-#include "masterlisthead.h"
-#include "servicelisthead.h"
+#include "incometablehead.h"
 
 ////////////////класс ClientInputScreen////////////////////
 //класс ClientInputScreen. Это класс, отвечающий за отображение «экрана»,
@@ -11,18 +10,16 @@
 class ClientInputScreen
 {
 private:
-ClientList* ptrClientList;
+ClientTable* ptrClientTable;
 string CName;
-string Number;
-string Service;
-string Master;
-string Comment;
-int Data;
-int Sum;
-int aptNo;
-
+string cNumber;
+string cService;
+string cMaster;
+string cComment;
+int cData;
+int cSum;
 public:
-ClientInputScreen(ClientList* ptrCL) : ptrClientList(ptrCL)
+ClientInputScreen(ClientTable* ptrCT) : ptrClientTable(ptrCT)
 {
 /* тут пусто */
 }

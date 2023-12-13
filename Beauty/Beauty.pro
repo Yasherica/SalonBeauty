@@ -11,6 +11,12 @@ qtcAddDeployment()
 HEADERS += \
     clienthead.h \
     clienttablehead.h \
-    masterhead.h \
-    clientinputscreenhead.h
+    clientinputscreenhead.h \
+    userinterfacehead.h \
+    incometablehead.h \
+    incomehead.h \
+    expensescreenhead.h \
+    expensetablehead.h \
+    expensehead.h \
+    annualreporthead.h
 
