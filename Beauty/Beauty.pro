@@ -4,8 +4,7 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += main.cpp \
-    client.cpp \
-    GlobalMethod.cpp
+    client.cpp
 
 include(deployment.pri)
 qtcAddDeployment()
@@ -20,6 +19,5 @@ HEADERS += \
     expensescreenhead.h \
     expensetablehead.h \
     expensehead.h \
-    annualreporthead.h \
-    globalmethod.h
+    annualreporthead.h
 
