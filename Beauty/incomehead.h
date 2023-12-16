@@ -1,19 +1,23 @@
 #ifndef INCOME
 #define INCOME
+
+
+#include <list>
+
 //Класс доходов
 class Income
 {
 private:
 string ClientName;
-string Service;
+string iService;
 double CostService;
-int Date;
+int iDate;
 public:
 Income(int); // конструктор с одним параметром
-string GetClientName();
+string GetCN;
 string GetService();
 double GetCostService();
-int GetDate;
+int GetIDate();
 };
-#endif // INCOME
 
+#endif // INCOME

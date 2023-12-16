@@ -1,10 +1,8 @@
-#include <iostream>
-
-using namespace std;
-
+// Main.cpp
+#include "userinterfacehead.h"
 int main()
 {
-    cout << "Hello World!" << endl;
-    return 0;
+UserInterface theUserInterface;
+theUserInterface.interact();
+return 0;
 }
-

@@ -1,7 +1,9 @@
 #ifndef INCOMETABLEHEAD
 #define INCOMETABLEHEAD
 
-#include "incomehead.h"
+//#include "incomehead.h"
+#include <list>
+
 //класс IncomeTable — список всех доходов
 //Он содержит множество указателей на класс Client
 class IncomeTable
@@ -21,4 +23,3 @@ void DisplayIncome(); // вывод списка клиента
 };
 
 #endif // INCOMETABLEHEAD
-

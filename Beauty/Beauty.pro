@@ -3,14 +3,22 @@ CONFIG += console
 CONFIG -= app_bundle
 CONFIG -= qt
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    client.cpp
 
 include(deployment.pri)
 qtcAddDeployment()
 
 HEADERS += \
+    clienthead.h \
+    clienttablehead.h \
+    clientinputscreenhead.h \
+    userinterfacehead.h \
     incometablehead.h \
-    expensehead.h \
     incomehead.h \
-    paymentinputscreenhead.h
+    expensescreenhead.h \
+    expensetablehead.h \
+    expensehead.h \
+    annualreporthead.h
+
 
