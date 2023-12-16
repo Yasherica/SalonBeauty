@@ -1,14 +1,14 @@
 #ifndef EXPENSETABLE_H
 #define EXPENSETABLE_H
 
-#include "expensetable.h"
+#include "expensehead.h"
 
 //////////////////// класс таблица расходов //////////////////
 
 class ExpenseTable
 {
 private:
-vector<Expense*> vectPtrsExpenses; //вектор указателей на расходы
+vector<Expense*> vectPtrsExpense; //вектор указателей на расходы
 vector<Expense*>::iterator iter;
 
 public:
@@ -17,8 +17,8 @@ void InsertExpense(Expense*);
 string GetRcatExpense();
 string GetRDateExpense();
 string GetAmount();
-void DisplayExp();
 float DisplaySumExpense();
+void DisplayExp();
 };
 
 #endif // EXPENSETABLE_H

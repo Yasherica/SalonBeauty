@@ -1,7 +1,7 @@
-#ifndef EXPENSESCREEN_H
-#define EXPENSESCREEN_H
+#ifndef EXPENSESCREENHEAD_H
+#define EXPENSESCREENHEAD_H
 
-#include "expensescreen.h"
+#include "expensetablehead.h"
 
 //////////////////// класс Экран ввода расходов //////////////////
 
@@ -18,5 +18,5 @@ ExpenseScreen(ExpenseTable*);
 void SetExpense();
 };
 
-#endif // EXPENSESCREEN_H
+#endif // EXPENSESCREENHEAD_H
 

@@ -2,6 +2,7 @@
 #define INCOMETABLEHEAD
 
 #include "incomehead.h"
+
 //класс IncomeTable — список всех доходов
 //Он содержит множество указателей на класс Client
 class IncomeTable

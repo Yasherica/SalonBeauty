@@ -1,7 +1,9 @@
 #ifndef USERINTERFACE_H
 #define USERINTERFACE_H
 
-#include "userinterface.h"
+#include "clientinputscreenhead.h"
+#include "expensescreenhead.h"
+#include "annualreporthead.h"
 
 //////////////////// Экран интерфейса пользователя //////////////////
 
@@ -9,9 +11,8 @@ class UserInterface
 {
 private:
 ClientTable* ptrClientTable;
-ClientInputScreen* ptrClientInpuyScreen;
+ClientInputScreen* ptrClientInputScreen;
 IncomeTable* ptrIncomeTable;
-PaymantIncomeScreen* ptrPaymantIncomeScreen;
 ExpenseTable* ptrExpenseTable;
 ExpenseScreen* ptrExpenseScreen;
 AnnualReport* ptrAnnualReport;
@@ -23,4 +24,3 @@ void interact();
 };
 
 #endif // USERINTERFACE_H
-
