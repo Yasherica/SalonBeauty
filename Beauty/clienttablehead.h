@@ -1,12 +1,18 @@
 #ifndef CLIENTTABLEHEAD
 #define CLIENTTABLEHEAD
 
+
 #include "clienttablehead.h"
+
+
+
 
 ///////////////////класс ClientTable////////////////////////
 //класс ClientTable — список всех клиентов.
 //Он содержит множество указателей на класс Client
+
 // и оперирует ими при выводе
+
 class ClientTable
 {
 private:

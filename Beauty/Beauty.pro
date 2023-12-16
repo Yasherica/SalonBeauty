@@ -9,8 +9,10 @@ include(deployment.pri)
 qtcAddDeployment()
 
 HEADERS += \
+
     beautyhead.h \
     clienthead.h \
     clienttablehead.h \
     masterhead.h
+
 
