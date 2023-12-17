@@ -4,7 +4,8 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += main.cpp \
-    client.cpp
+    client.cpp \
+    clienttable.cpp
 
 include(deployment.pri)
 qtcAddDeployment()
