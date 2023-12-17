@@ -3,20 +3,17 @@
 
 #include "expensetablehead.h"
 
-//////////////////// класс Экран ввода расходов //////////////////
-
+// класс Экран ввода расходов
 class ExpenseScreen
 {
 private:
-ExpenseTable* ptrExpenseTable; //таблица расходов
-string ExpenseCategory; //категория
-string ExpenseDate; //дата
-string ExpenseName; //название
-float ExpenseAmount; // сумма
+    ExpenseTable* ptrExpenseTable; //таблица расходов
+    string Category; //категория
+    string RDate; //дата
+    float Amount; // сумма
 public:
-ExpenseScreen(ExpenseTable*);
-void SetExpense();
+    ExpenseScreen(ExpenseTable*);
+    void SetExpense();
 };
 
 #endif // EXPENSESCREENHEAD_H
-

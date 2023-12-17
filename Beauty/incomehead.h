@@ -1,22 +1,23 @@
-#ifndef INCOME
-#define INCOME
+#ifndef INCOME_H
+#define INCOME_H
 
-#include "libs.h"
+#include <list>
+#include <string>
 
 //Класс доходов
 class Income
 {
 private:
 string ClientName;
-string iService;
-double CostService;
-int iDate;
+string service;
+double amount;
+string data;
+string master;
 public:
-Income(int); // конструктор с одним параметром
-string GetCN;
-string GetService();
-double GetCostService();
-int GetIDate();
+Income(string p_ClientName, string p_data, string p_service,
+       double p_amount, string p_master); // конструктор
+void getInfoIncome(string& p_ClientName, string& p_data, string& p_service,
+       double& p_amount, string& p_master); //метод для возврата
 };
 
-#endif // INCOME
+#endif // INCOME_H

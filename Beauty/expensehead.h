@@ -1,26 +1,31 @@
-#ifndef EXPENSE
-#define EXPENSE
+#ifndef EXPENSEHEAD_H
+#define EXPENSEHEAD_H
 
-#include "libs.h"
+#include <list>
+#include <string>
 
-//класс Expense
+using namespace std;
+
 //Класс расходов
 class Expense
 {
 private:
-int RDate; // сумма и дата уплаты расходов
-string RName; // название расходов (газ, свет, ремонт и тд)
-float amount; // сколько платим
-/* string category; */
+    string RDate; // сумма и дата уплаты расходов
+    string Category; // название расходов (газ, свет, ремонт и тд)
+    float amount; // сколько платим
+    /* string category; */
+
 public:
-Expense(int rd, string rn, float a) :
- RDate(rd), RName(rn), amount(a)
-{
-/* тут пусто! */
-string GetRName();
-int GetRName();
-float GetAmount();
-/* string GetCategory() */
+    Expense(string rd, string  ctg, float a);
+   /* RDate(rd), Category(ctg), amount(a)
+    {
+
+    } */
+    string GetRDate();
+    string GetRCtg();
+    float GetAmount();
+
+
 };
-#endif // EXPENSE
+#endif // EXPENSEHEAD_H
 

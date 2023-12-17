@@ -4,7 +4,15 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += main.cpp \
-    client.cpp
+    client.cpp \
+    userinterface.cpp \
+    expense.cpp \
+    expensescreen.cpp \
+    expensetable.cpp \
+    income.cpp \
+    incometable.cpp \
+    annualreport.cpp \
+    clienttable.cpp
 
 include(deployment.pri)
 qtcAddDeployment()
