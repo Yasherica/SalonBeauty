@@ -4,6 +4,8 @@
 #include "clienttablehead.h"
 #include "incometablehead.h"
 
+using namespace std;
+
 ////////////////класс ClientInputScreen////////////////////
 //класс ClientInputScreen. Это класс, отвечающий за отображение «экрана»,
 //куда пользователь может ввести данные о новом клиенте:
@@ -11,13 +13,14 @@ class ClientInputScreen
 {
 private:
 ClientTable* ptrClientTable;
-string CName;
-string cNumber;
-string cService;
-string cMaster;
-string cComment;
-int cData;
-int cSum;
+string name;
+string number;
+string service;
+string master;
+string comment;
+string data;
+string DateService;
+int Sum;
 public:
 ClientInputScreen(ClientTable* ptrCT) : ptrClientTable(ptrCT)
 {
@@ -27,4 +30,7 @@ void setClient(); // добавление данных о клиенте
 };
 
 #endif // CLIENTINPUTSCREENHEAD
+
+
+
 

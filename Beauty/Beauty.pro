@@ -5,7 +5,8 @@ CONFIG -= qt
 
 SOURCES += main.cpp \
     client.cpp \
-    clienttable.cpp
+    clienttable.cpp \
+    clientinputscreen.cpp
 
 include(deployment.pri)
 qtcAddDeployment()
@@ -20,6 +21,7 @@ HEADERS += \
     expensescreenhead.h \
     expensetablehead.h \
     expensehead.h \
-    annualreporthead.h
+    annualreporthead.h \
+    clientinputtable.h
 
 
