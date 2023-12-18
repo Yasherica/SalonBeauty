@@ -3,7 +3,8 @@ CONFIG += console
 CONFIG -= app_bundle
 CONFIG -= qt
 
-SOURCES += main.cpp \
+SOURCES += \
+    main.cpp\
     client.cpp \
     userinterface.cpp \
     expense.cpp \
@@ -12,7 +13,8 @@ SOURCES += main.cpp \
     income.cpp \
     incometable.cpp \
     annualreport.cpp \
-    clienttable.cpp
+    clienttable.cpp \
+    clientinputscreen.cpp
 
 include(deployment.pri)
 qtcAddDeployment()

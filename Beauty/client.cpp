@@ -1,11 +1,9 @@
 #include <iostream>
 #include "clienthead.h"
-#include <cstdlib>
-#include <stdint.h>
 
 using namespace std;
 
-////////////////методы класса Client///////////////////////
+//методы класса Client
 //в конструкторе задаём имя клиента и остальную информацию
 Client::Client(string n, string Num, string Serv, string Mas, string DT, string DS, int SM, string comm)   //конструктор
 {

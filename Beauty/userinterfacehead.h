@@ -1,9 +1,15 @@
 #ifndef USERINTERFACE_H
 #define USERINTERFACE_H
 
+#include "clienthead.h"
+#include "clienttablehead.h"
 #include "clientinputscreenhead.h"
 #include "expensescreenhead.h"
 #include "annualreporthead.h"
+#include "incomehead.h"
+#include "incometablehead.h"
+#include "expensehead.h"
+#include "expensetablehead.h"
 
 class UserInterface
 {
@@ -14,7 +20,6 @@ private:
     ExpenseTable* ptrExpenseTable;
     ExpenseScreen* ptrExpenseScreen;
     AnnualReport* ptrAnnualReport;
-    char ch;
 public:
     UserInterface();
     ~UserInterface();

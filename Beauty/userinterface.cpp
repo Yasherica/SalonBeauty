@@ -9,7 +9,7 @@ UserInterface::UserInterface()
     ptrClientTable = new ClientTable;
     ptrIncomeTable = new IncomeTable;
     ptrExpenseTable = new ExpenseTable;
-   // ptrAnnualReport = new AnnualReport;
+    ptrAnnualReport = new AnnualReport;
 }
 
 UserInterface::~UserInterface()
@@ -17,7 +17,7 @@ UserInterface::~UserInterface()
     delete ptrClientTable;
     delete ptrIncomeTable;
     delete ptrExpenseTable;
-    //delete ptrAnnualReport;
+    delete ptrAnnualReport;
 }
 
 void UserInterface::interact()
@@ -80,7 +80,7 @@ void UserInterface::interact()
                              break;
 
                              case 'r':
-                             ptrIncomeTable->display();
+                             ptrExpenseTable->display();
                              break;
                              }
                      }//Расходы
@@ -108,4 +108,4 @@ void UserInterface::interact()
                         system("cls");
                     }
             } // конец while
-    }
+}

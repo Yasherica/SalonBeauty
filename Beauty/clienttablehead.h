@@ -4,25 +4,8 @@
 #include "clienthead.h"
 #include <list>
 
-using namespace std;
 
-///////////////////класс ClientTable////////////////////////
-//класс ClientTable — список всех клиентов.
-//Он содержит множество указателей на класс Client
-/*class ClientTable
-{
-private:
-// установить указатели на клиентов
-list <Client*> setPtrsClientTable; // указатели на класс клиентов
-list <Client*>::iterator iter; //итератор
-public:
-~ClientTable(); // деструктор (удаление клиентов)
-void InsertClient(Client*); // добавить клиента в список
-//string GetNumberClient(string); // возвращает номер телефона клиента
-void DisplayClient(); // вывод списка клиента
-};*/
-
-
+//класс ClientTable
 class ClientTable                        // список всех клиентов
 {
 private:

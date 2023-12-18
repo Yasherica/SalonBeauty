@@ -12,8 +12,7 @@ private:
     string RDate; //дата
     float Amount; // сумма
 public:
-    ExpenseScreen(ExpenseTable*);
+    ExpenseScreen(ExpenseTable* ptrET);
     void SetExpense();
 };
-
-#endif // EXPENSESCREENHEAD_H
+#endif //EXPENSESCREENHEAD_H

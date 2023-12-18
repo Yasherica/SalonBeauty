@@ -1,16 +1,7 @@
 #include <iostream>
-#include <cstdlib>
 #include "expensehead.h"
 
 using namespace std;
-
-
-Expense::Expense(string rd, string ctg, float a)                       //конструктор
-{
-    RDate = rd;
-    Category = ctg;
-    amount = a;
-}
 
 string Expense::GetRDate()                                                  //метод для возврата даты расхода
 {
@@ -24,6 +15,12 @@ string Expense::GetRCtg()                                                  //м�
 
 float Expense::GetAmount()                                                      //метод для возврата суммы расхода
 {
-    return amount;
+    return Amount;
 }
 
+void Expense::getInfoExpense(string& rd, string& ctg, float& a)                       //значения полей
+{
+     rd = RDate;
+     ctg = Category;
+     a = Amount;
+}

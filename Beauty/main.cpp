@@ -1,8 +1,10 @@
-// Main.cpp
+#include <iostream>
 #include "userinterfacehead.h"
-int main()
-{
-UserInterface theUserInterface;
-theUserInterface.interact();
-return 0;
-}
+
+int main() {
+    UserInterface theUserInterface;
+    theUserInterface.interact();
+    return 0;
+}};
+
+

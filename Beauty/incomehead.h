@@ -4,6 +4,8 @@
 #include <list>
 #include <string>
 
+using namespace std;
+
 //Класс доходов
 class Income
 {

@@ -1,6 +1,5 @@
-#include "incometablehead.h"
 #include <iostream>
-#include <iomanip>
+#include "incometablehead.h"
 
 using namespace std;
 
