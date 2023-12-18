@@ -43,7 +43,7 @@ cout << (*iter)->getName() << " || "
 }
 }
 
-void ClientTable::GetInfoClient(string name) // получить инфу о клиенте по имени жильца
+int ClientTable::GetInfoClient(string name) // получить инфу о клиенте по имени жильца
 {
     int Sum;
     string Num, Serv, Mas, DT, DS, comm;

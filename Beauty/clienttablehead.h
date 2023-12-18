@@ -14,7 +14,7 @@ private:
 public:
     ~ClientTable();                      // деструктор - удаление клиентов
     void insertClient(Client* ptrC);    // добавление клиента в список
-    void GetInfoClient(string);
+    int GetInfoClient(string);
     void display();                     // вывод списка клиентов
 };
 

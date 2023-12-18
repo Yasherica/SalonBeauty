@@ -5,15 +5,14 @@ using namespace std;
 
 //методы класса Client
 //в конструкторе задаём имя клиента и остальную информацию
-Client::Client(string n, string Num, string Serv, string Mas, string DT, string DS, int SM, string comm)   //конструктор
+Client::Client(string n, string Num, string Serv, string Mas, string DT, string DS, string comm)   //конструктор
 {
-    name = n;
+    ClientName= n;
     number = Num;
     service = Serv;
     master = Mas;
-    date = DT;
-    DateService = DS;
-    sum = SM;
+    data = DT;
+    CostService = DS;
     comment = comm;
 }
 
@@ -24,9 +23,9 @@ Client::~Client() // деструктор
 /* тут тоже пусто */
 }
 //--------------------------------------------------------
-string Client::getName() //геттер возвращает
+string Client::getClientName() //геттер возвращает
 {
-return name;
+return ClientName;
 }
 //---------------------------------------------------------
 string Client::getNumber() //геттер возвращает
@@ -44,20 +43,17 @@ string Client::getMaster() //
 return master;
 }
 //--------------------------------------------------------
-string Client::getDate() //
+string Client::getData() //
 {
-return date;
+return data;
 }
 //--------------------------------------------------------
-string Client::getDateService() //
+string Client::getCostService() //
 {
-return DateService;
+return CostService;
 }
-//--------------------------------------------------------
-int Client::getSum() //
-{
-return sum;
-}
+
+
 //--------------------------------------------------------
 string Client::getComment() //
 {

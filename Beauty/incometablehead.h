@@ -17,6 +17,7 @@ public:
     void insertInc(Income* ptrInc);     //добавляем доходы в вектор
     void display();                     //распечатываем сумму доходов
     float displaySummary();             //используется при составлении годового отчета
+
 };
 
 #endif // INCOMERECORD_H

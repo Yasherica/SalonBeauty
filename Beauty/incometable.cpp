@@ -1,5 +1,6 @@
 #include <iostream>
 #include "incometablehead.h"
+#include <iomanip>
 
 using namespace std;
 
@@ -30,42 +31,25 @@ void IncomeTable::display()                            // распечатыва
     {
         iter = vectPtrsIncome.begin();
         string   p_data,
-                 p_ClientName;
-                 p_service;
+                 p_ClientName,
+                 p_service,
                  p_master;
         double   p_amount;
         while (iter != vectPtrsIncome.end())
         {                                               // распечатываем сумму доходов
-            (*iter)->getInfoIncome(p_date, p_ClientName, p_service, p_master,
-                                   p_amount);
+            (*iter)->getInfoIncome(p_ClientName, p_data, p_service,
+                                   p_amount, p_master);
             cout << setw(14) << p_data << "|" << setw(19) << p_ClientName << "|"
                  << setw(14) <<p_service << "|" << setw(19) << p_master << "|" << setw(19) << p_amount <<  endl;
 
             cout << "---------------------------------------------------------------------" << endl;
-            cout << "'1' - Delete   '2' - Edit   'any other number' - Next" << endl;
-            char choise;
-            cin >> choise;
-            if (choise == '1')
-            {
-                delete *iter;
-                iter = vectPtrsIncome.erase(iter);
-            }
-            else if (choise == '2')
-            {
-                (*iter)->edit();
-                ++iter;
-            }
-            else
-            {
-                ++iter;
-            }
-            cout << "-----------------------------------------------------" << endl;
+
         }
      }
         cout << endl;
 }
 
-double IncomeTable::displaySummary()                   // используется при составлении годового отчета
+float IncomeTable::displaySummary()                   // используется при составлении годового отчета
 {
     double totalIncomes = 0;                            // Сумма доходов
 

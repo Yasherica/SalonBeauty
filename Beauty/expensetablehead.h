@@ -18,7 +18,7 @@ private:
 public:
     ~ExpenseTable();
     void InsertExpense(Expense* ptrExpense);
-    string GetRCtgExpense();
+   string GetRCtgExpense();
     string GetRDateExpense();
     string GetAmount();
     float DisplaySumExpense();

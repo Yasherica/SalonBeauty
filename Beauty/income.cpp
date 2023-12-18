@@ -3,7 +3,7 @@
 
 using namespace std;
 
-Income::Income(string p_ClientName, string p_data, string p_service, double p_amount,
+Income::Income(string p_ClientName, string p_date, string p_service, double p_amount,
                string p_master)
 {
     ClientName = p_ClientName;
@@ -13,12 +13,12 @@ Income::Income(string p_ClientName, string p_data, string p_service, double p_am
     master = p_master;
 }
 
-double Income::getAmount()                                                                   //метод для возврата суммы дохода
-{
-    return amount;
-}
+//double Income::getAmount()   //метод для возврата суммы дохода
+//{
+//    return amount;
+//}
 
-void Income::getInfoIncome(string& p_ClientName, string& p_data, string& p_service,                             //метод для возврата
+void Income::getInfoIncome(string& p_ClientName, string& p_date, string& p_service,    //метод для возврата
                            double& p_amount, string& p_master)
 {
     ClientName = p_ClientName;

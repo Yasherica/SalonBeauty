@@ -11,7 +11,7 @@ private:
     IncomeTable* ptrIT; // записи доходов
     ExpenseTable* ptrET; // записи расходов
     float expense;
-    float incomes;// суммы доходов и расходов
+    float income;// суммы доходов и расходов
 public:
     AnnualReport(IncomeTable*, ExpenseTable*);
     void display(); // отображение годового отчета

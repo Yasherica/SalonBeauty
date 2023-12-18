@@ -16,7 +16,7 @@ void AnnualReport::display()
     incomes = ptrIT->displaySummary();
     cout << incomes << endl;
     cout << "Expenses\n" << endl;
-    expenses = ptrET->displaySummary();
+    expenses = ptrET->DisplaySumExpense();
     cout << "Total expenses:\t\t";
     cout << expenses << endl;
     // вычисляем прибыльность

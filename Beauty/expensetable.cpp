@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include "expensetablehead.h"
 
 
@@ -14,7 +15,7 @@ ExpenseTable::~ExpenseTable()                         //деструктор
     }
 }
 
-void ExpenseTable::insertExpense(Expense* ptrExpense)          //добавляем расходы в вектор
+void ExpenseTable::InsertExpense(Expense* ptrExpense)          //добавляем расходы в вектор
 {
     vectPtrsExpense.push_back(ptrExpense);
 }
@@ -26,18 +27,21 @@ void ExpenseTable::DisplayExp()                           //распечатыв
     system("cls");
     cout << setw(15) << "Date|" << setw(20) << "Reciever|"
          << setw(20) << "Amount|" << setw(20) << "Category\n"
-    << "--------------------------------------------------------------------------" << endl;
-    if (vectPtrsExpense.size() == 0)                   // В контейнере нет расходов
-        cout << "***There is no expenses***\n" << endl;
-    else
-    {
-        iter = vectPtrsExpense.begin();
-        string rd,                                  //дата уплаты расходов
-               ctg;                             //указывается с какой целью произведена транзакция (оплата ком. услуг, выплата кредита и др.)
-        float a;                                 //величина транзакции
-        while (iter != vectPtrsExpense.end())
-        {                                               // распечатываем все расходы
-            (*iter)->getInfoExpense(string& rd, string& ctg, float& a);
+   << "--------------------------------------------------------------------------" << endl;
+   if (vectPtrsExpense.size() == 0)                   // В контейнере нет расходов
+      cout << "***There is no expenses***\n" << endl;
+   else
+   {
+      iter = vectPtrsExpense.begin();
+      string rd,                                  //дата уплаты расходов
+             ctg;                             //указывается с какой целью произведена транзакция (оплата ком. услуг, выплата кредита и др.)
+      float a;                                 //величина транзакции
+      while (iter != vectPtrsExpense.end())
+     {                                               // распечатываем все расходы
+         (*iter)->getInfoExpense(rd, ctg, a);
+            rd = (*iter)->GetRDate();
+            ctg = (*iter)->GetRCtg();
+            a = (*iter)->GetAmount();
             cout << setw(14) << rd << "|" << setw(19) << ctg << "|"
                  << setw(19) << a << "|" << endl;
 

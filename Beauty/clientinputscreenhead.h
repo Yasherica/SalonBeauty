@@ -9,13 +9,12 @@ class ClientInputScreen
 {
 private:
     ClientTable* ptrClientTable;
-    string name; // имя клиента
+    string ClientName; // имя клиента
     string number; // номер телефона клиента
     string service;// услуга
     string master;// мастер
-    string date;// дата записи
-    string DateService; //дата оказания услуги
-    int sum;// цена
+    string data;// дата записи
+    string CostService; //дата оказания услуги
     string comment;// доп.комментарий
 public:
     ClientInputScreen(ClientTable* ptrCT) : ptrClientTable(ptrCT)

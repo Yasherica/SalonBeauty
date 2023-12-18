@@ -13,7 +13,7 @@ void ClientInputScreen::setClient()                                             
 {
     string n, Num,
            Serv, Mas,
-           Dt, DS, comm ;
+           DT, DS, comm ;
     int Sum;
 
     system("cls");
@@ -38,7 +38,7 @@ void ClientInputScreen::setClient()                                             
 
     Client* ptrClient = new Client(n, Num,
                                    Serv, Mas,
-                                   Dt, DS, comm);           // создать клиента
+                                   DT, DS, comm);           // создать клиента
     ptrClientTable->insertClient(ptrClient);                                     // занести в список клиентов
 }
 

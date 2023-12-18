@@ -19,10 +19,10 @@ public:
     RDate(rd), Category(ctg), Amount(a)
     {
 
-    };
+    }
     string GetRDate();
     string GetRCtg();
     float GetAmount();
     void getInfoExpense(string& rd, string& ctg,float& a);
-
+};
 #endif //EXPENSEHEAD_H

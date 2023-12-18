@@ -9,25 +9,22 @@ using namespace std;
 class Client
 {
 private:
-    string name; // имя клиента
+    string ClientName; // имя клиента
     string number; // номер телефона клиента
     string service;// услуга
     string master;// мастер
-    string date;// дата записи
-    string DateService; //дата оказания услуги
-    int sum;// цена
+    string data;// дата записи
+    string CostService; //дата оказания услуги
     string comment;// доп.комментарий
 public:
-    Client(string n, string num, string Serv, string Mas, string DT, string DS, int Sum, string comm);
+    Client(string n, string Num, string Serv, string Mas, string DT, string DS, string comm);
     ~Client();
-
-    string getName(); //возвращает имя клиента
+    string getClientName(); //возвращает имя клиента
     string getNumber(); //возвращает номер телефона клиента
     string getService();
     string getMaster();
-    string getDate();
-    string getDateService();
-    int getSum();
+    string getData();
+    string getCostService();
     string getComment();
 };
 
