@@ -25,11 +25,11 @@ void ClientInputScreen::setClient()                                             
     getline(cin, Serv);
     cout << "Enter master's name: " << endl;
     getline(cin, Mas);
-    cout << "Enter: " << endl;
+    cout << "Enter date: " << endl;
     getline(cin, DT);
-    cout << "Enter ): " << endl;
+    cout << "Enter cost: " << endl;
     getline(cin, DS);
-    cout << "Enter : " << endl;
+    cout << "Enter comment: " << endl;
     getline(cin, comm);
 
 

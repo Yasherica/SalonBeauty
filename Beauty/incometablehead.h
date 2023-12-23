@@ -14,9 +14,14 @@ private:
     vector<Income*>::iterator iter;     //итератор для вектора указателей
 public:
     ~IncomeTable();                    //деструктор
-    void insertInc(Income* ptrInc);     //добавляем доходы в вектор
+    void insertInc(Income* ptrIncome);     //добавляем доходы в вектор
     void display();                     //распечатываем сумму доходов
     float displaySummary();             //используется при составлении годового отчета
+    string getClientName();
+    string getService();
+    string getData();
+    string getMaster();
+    float getAmount();
 
 };
 

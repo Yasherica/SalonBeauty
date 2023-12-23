@@ -26,8 +26,8 @@ void UserInterface::interact()
             {
                 char choise;
                 cout << "Client - 'c', \n"
-                     << "Output the income table - 'i', \n"
                      << "Expense - 'e', \n"
+                     << "Income - 'm', \n"
                      << "Annual Report - 'a', \n"
                      << "Exit the program - 'q': \n";
                 cin >> choise;
@@ -54,14 +54,6 @@ void UserInterface::interact()
                      }
                  }//Клиент
 
-                     else if (choise == 'i') // ввод данных
-                     {
-                            system("cls");
-                            ptrIncomeTable->display();
-                            break;
-
-                     }//Доход
-
                      else if (choise == 'e') // ввод данных
                      {
                             system("cls");
@@ -84,7 +76,28 @@ void UserInterface::interact()
                              break;
                              }
                      }//Расходы
+                else if (choise == 'm') // ввод данных
+                {
+                       system("cls");
+                       cout << "Add income - 'l', \n";
+                       cout << "Output the income table - 'k', \n";
 
+                        cin >> choise;
+                        switch (choise)
+                        {
+                        case 'l':
+                        ptrIncomeScreen =
+                        new IncomeScreen(ptrIncomeTable);
+                        ptrIncomeScreen->setIncome();
+                        delete ptrIncomeScreen;
+                        system("cls");
+                        break;
+
+                        case 'k':
+                        ptrIncomeTable->display();
+                        break;
+                        }
+                    }
                      else if (choise == 'a') // ввод данных
                      {
                              system("cls");

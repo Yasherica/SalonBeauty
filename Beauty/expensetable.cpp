@@ -25,8 +25,8 @@ void ExpenseTable::InsertExpense(Expense* ptrExpense)          //добавля�
 void ExpenseTable::DisplayExp()                           //распечатываем все расходы
 {
     system("cls");
-    cout << setw(15) << "Date|" << setw(20) << "Reciever|"
-         << setw(20) << "Amount|" << setw(20) << "Category\n"
+    cout << setw(15) << "Date|" << setw(20) << "Category|"
+         << setw(20) << "Amount\n"
    << "--------------------------------------------------------------------------" << endl;
    if (vectPtrsExpense.size() == 0)                   // В контейнере нет расходов
       cout << "***There is no expenses***\n" << endl;
@@ -38,7 +38,7 @@ void ExpenseTable::DisplayExp()                           //распечатыв
       float a;                                 //величина транзакции
       while (iter != vectPtrsExpense.end())
      {                                               // распечатываем все расходы
-         (*iter)->getInfoExpense(rd, ctg, a);
+       (*iter)->getInfoExpense(rd, ctg, a);
             rd = (*iter)->GetRDate();
             ctg = (*iter)->GetRCtg();
             a = (*iter)->GetAmount();
@@ -46,8 +46,9 @@ void ExpenseTable::DisplayExp()                           //распечатыв
                  << setw(19) << a << "|" << endl;
 
             cout << "--------------------------------------------------------------------------" << endl;
-
+            *iter++;
         }
+
      }
         cout << endl;
 }

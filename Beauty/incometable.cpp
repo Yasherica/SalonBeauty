@@ -14,16 +14,16 @@ IncomeTable::~IncomeTable()                           // деструктор
     }
 }
 
-void IncomeTable::insertInc(Income* ptrInc)            // добавляем доходы в вектор
+void IncomeTable::insertInc(Income* ptrIncome)            // добавляем доходы в вектор
 {
-    vectPtrsIncome.push_back(ptrInc);
+    vectPtrsIncome.push_back(ptrIncome);
 }
 
 void IncomeTable::display()                            // распечатываем все доходы
 {
     system("cls");
-    cout << setw(15) << "Date|" << setw(20) << "Order number|"
-         << setw(15) << "Sum|" << setw(20) << "Payment method\n"
+    cout << setw(15) << "Date|" << setw(20) << "ClientName|"
+         << setw(15) << "service|" << setw(20) << "master|" << setw(20) << "cost\n"
     << "---------------------------------------------------------------------" << endl;
     if (vectPtrsIncome.size() == 0)                     // в контейнере нет доходов
         cout << "***There is no income***\n" << endl;
@@ -34,18 +34,23 @@ void IncomeTable::display()                            // распечатыва
                  p_ClientName,
                  p_service,
                  p_master;
-        double   p_amount;
+        float    p_amount;
         while (iter != vectPtrsIncome.end())
         {                                               // распечатываем сумму доходов
 
             (*iter)->getInfoIncome(p_ClientName, p_data, p_service,
-                                   p_amount, p_master);
+                                    p_master, p_amount);
+            p_data = (*iter)->getData();
+            p_ClientName = (*iter)->getClientName();
+            p_service = (*iter)->getService();
+            p_master = (*iter)->getMaster();
+            p_amount = (*iter)->getAmount();
             cout << setw(14) << p_data << "|" << setw(19) << p_ClientName << "|"
                  << setw(14) <<p_service << "|" << setw(19) << p_master << "|" << setw(19) << p_amount <<  endl;
 
             cout << "---------------------------------------------------------------------" << endl;
 
-
+            *iter++;
 
         }
      }

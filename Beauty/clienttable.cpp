@@ -22,9 +22,9 @@ void ClientTable::insertClient(Client* ptrC)
 
 void ClientTable::display() // вывод списка клиентов
 {
-cout << "\nApt#\tИмя клиента\n-------------------\n";
+cout << "\nApt#\tClient name\n-------------------\n";
 if (setPtrsClients.empty()) // если список клиентов пуст
-cout << "***Нет клиентов***\n" << endl; // выводим запись, что он пуст)
+cout << "***Not client***\n" << endl; // выводим запись, что он пуст)
 else
 {
 iter = setPtrsClients.begin();

@@ -7,6 +7,7 @@
 #include "annualreporthead.h"
 #include "incometablehead.h"
 #include "expensetablehead.h"
+#include "incomescreenhead.h"
 
 class UserInterface
 {
@@ -14,6 +15,7 @@ private:
     ClientTable* ptrClientTable;
     ClientInputScreen* ptrClientInputScreen;
     IncomeTable* ptrIncomeTable;
+    IncomeScreen* ptrIncomeScreen;
     ExpenseTable* ptrExpenseTable;
     ExpenseScreen* ptrExpenseScreen;
     AnnualReport* ptrAnnualReport;
