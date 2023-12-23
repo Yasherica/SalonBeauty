@@ -1,6 +1,8 @@
 #ifndef EXPENSETABLE_H
 #define EXPENSETABLE_H
 
+#include <string>
+#include <vector>
 #include "expensehead.h"
 
 //////////////////// класс таблица расходов //////////////////
@@ -14,9 +16,6 @@ vector<Expense*>::iterator iter;
 public:
 ~ExpenseTable();
 void InsertExpense(Expense*);
-string GetRcatExpense();
-string GetRDateExpense();
-string GetAmount();
 float DisplaySumExpense();
 void DisplayExp();
 };

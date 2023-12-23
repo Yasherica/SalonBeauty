@@ -9,10 +9,9 @@ class ExpenseScreen
 {
 private:
 ExpenseTable* ptrExpenseTable; //таблица расходов
-string ExpenseCategory; //категория
-string ExpenseDate; //дата
-string ExpenseName; //название
-float ExpenseAmount; // сумма
+string Category; //категория
+string RDate; //дата
+float Amount; // сумма
 public:
 ExpenseScreen(ExpenseTable*);
 void SetExpense();
