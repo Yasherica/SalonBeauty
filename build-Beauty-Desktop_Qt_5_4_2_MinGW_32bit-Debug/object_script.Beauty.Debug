@@ -1,0 +1,12 @@
+INPUT(
+./debug\main.o
+./debug\annualreport.o
+./debug\client.o
+./debug\clientinputscreen.o
+./debug\clienttable.o
+./debug\expense.o
+./debug\expensescreen.o
+./debug\expensetable.o
+./debug\income.o
+./debug\userinterface.o
+);

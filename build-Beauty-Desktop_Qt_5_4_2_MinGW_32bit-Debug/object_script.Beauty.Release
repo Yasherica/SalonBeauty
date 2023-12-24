@@ -1,0 +1,12 @@
+INPUT(
+./release\main.o
+./release\annualreport.o
+./release\client.o
+./release\clientinputscreen.o
+./release\clienttable.o
+./release\expense.o
+./release\expensescreen.o
+./release\expensetable.o
+./release\income.o
+./release\userinterface.o
+);

@@ -13,8 +13,7 @@ SOURCES += main.cpp \
     expensetable.cpp \
     income.cpp \
     incometable.cpp \
-    userinterface.cpp \
-    incomescreen.cpp
+    userinterface.cpp
 
 include(deployment.pri)
 qtcAddDeployment()

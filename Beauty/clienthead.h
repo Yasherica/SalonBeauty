@@ -14,17 +14,17 @@ private:
     string service;// услуга
     string master;// мастер
     string data;// дата записи
-    string CostService; //дата оказания услуги
+    float CostService; //дата оказания услуги
     string comment;// доп.комментарий
 public:
-    Client(string n, string Num, string Serv, string Mas, string DT, string DS, string comm);
+    Client(string n, string Num, string Serv, string Mas, string DT, float DS, string comm);
     ~Client();
     string getClientName(); //возвращает имя клиента
     string getNumber(); //возвращает номер телефона клиента
     string getService();
     string getMaster();
     string getData();
-    string getCostService();
+    float getCostService();
     string getComment();
 };
 

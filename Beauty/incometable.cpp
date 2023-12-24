@@ -19,36 +19,33 @@ void IncomeTable::insertInc(Income* ptrIncome)            // добавляем 
     vectPtrsIncome.push_back(ptrIncome);
 }
 
+
+
 void IncomeTable::display()                            // распечатываем все доходы
 {
     system("cls");
-    cout << setw(15) << "Date|" << setw(20) << "ClientName|"
-         << setw(15) << "service|" << setw(20) << "master|" << setw(20) << "cost\n"
-    << "---------------------------------------------------------------------" << endl;
+    cout << setw(15) << "Date|" << setw(15) << "ClientName|"
+         << setw(15) << "Service|" << setw(15) << "Master|" << setw(16) << "Cost|\n"
+    << "---------------------------------------------------------------------------" << endl;
     if (vectPtrsIncome.size() == 0)                     // в контейнере нет доходов
         cout << "***There is no income***\n" << endl;
     else
     {
         iter = vectPtrsIncome.begin();
-        string   p_data,
-                 p_ClientName,
-                 p_service,
-                 p_master;
-        float    p_amount;
+        string n, Serv, Mas,DT;
+        float DS;
         while (iter != vectPtrsIncome.end())
         {                                               // распечатываем сумму доходов
 
-            (*iter)->getInfoIncome(p_ClientName, p_data, p_service,
-                                    p_master, p_amount);
-            p_data = (*iter)->getData();
-            p_ClientName = (*iter)->getClientName();
-            p_service = (*iter)->getService();
-            p_master = (*iter)->getMaster();
-            p_amount = (*iter)->getAmount();
-            cout << setw(14) << p_data << "|" << setw(19) << p_ClientName << "|"
-                 << setw(14) <<p_service << "|" << setw(19) << p_master << "|" << setw(19) << p_amount <<  endl;
+            DT = (*iter)->getData();
+            n = (*iter)->getClientName();
+            Serv = (*iter)->getService();
+            Mas = (*iter)->getMaster();
+            DS = (*iter)->getAmount();
+            cout << setw(14) << DT << "|" << setw(14) << n << "|"
+                 << setw(14) <<Serv << "|" << setw(14) << Mas << "|" << setw(14) << DS << "|" <<  endl;
 
-            cout << "---------------------------------------------------------------------" << endl;
+            cout << "---------------------------------------------------------------------------" << endl;
 
             *iter++;
 
@@ -70,6 +67,8 @@ float IncomeTable::displaySummary()                   // используетс�
     iter = vectPtrsIncome.begin();
     while (iter != vectPtrsIncome.end())
     {
+        cout << '\t' << "service" << '\t' << "master" << '\t' << "cost" << endl;
+        cout << '\t' << ((*iter)->getService()) << '\t' << ((*iter)->getMaster()) << '\t' << ((*iter)->getAmount()) << endl;
         totalIncomes += (*iter)->getAmount();          // подсчитываем все доходы
         iter++;
     }

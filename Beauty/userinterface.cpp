@@ -27,7 +27,7 @@ void UserInterface::interact()
                 char choise;
                 cout << "Client - 'c', \n"
                      << "Expense - 'e', \n"
-                     << "Income - 'm', \n"
+                     << "Output the income table - 'm', \n"
                      << "Annual Report - 'a', \n"
                      << "Exit the program - 'q': \n";
                 cin >> choise;
@@ -42,7 +42,7 @@ void UserInterface::interact()
                     {
                         case 'c':
                         ptrClientInputScreen =
-                        new ClientInputScreen(ptrClientTable);
+                        new ClientInputScreen(ptrClientTable,ptrIncomeTable);
                         ptrClientInputScreen->setClient();
                         delete ptrClientInputScreen;
                         system("cls");
@@ -79,25 +79,9 @@ void UserInterface::interact()
                 else if (choise == 'm') // ввод данных
                 {
                        system("cls");
-                       cout << "Add income - 'l', \n";
-                       cout << "Output the income table - 'k', \n";
-
-                        cin >> choise;
-                        switch (choise)
-                        {
-                        case 'l':
-                        ptrIncomeScreen =
-                        new IncomeScreen(ptrIncomeTable);
-                        ptrIncomeScreen->setIncome();
-                        delete ptrIncomeScreen;
-                        system("cls");
-                        break;
-
-                        case 'k':
                         ptrIncomeTable->display();
                         break;
                         }
-                    }
                      else if (choise == 'a') // ввод данных
                      {
                              system("cls");
