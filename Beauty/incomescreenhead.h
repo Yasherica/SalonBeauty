@@ -6,11 +6,13 @@ class IncomeScreen                         //Класс для ввода дох
 {
 private:
     IncomeTable* ptrIncomeTable;              // запись о доходах
-    string ClientName;
-    string service;
-    float amount;
-    string data;
-    string master;
+    string ClientName; // имя клиента
+    string number; // номер телефона клиента
+    string service;// услуга
+    string master;// мастер
+    string data;// дата записи
+    string CostService; //дата оказания услуги
+    string comment;// доп.комментарий
 public:
     IncomeScreen(IncomeTable* ptrIn);     // конструктор
     void setIncome();                           //добавить данные о доходе

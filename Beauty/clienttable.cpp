@@ -45,7 +45,8 @@ cout << (*iter)->getClientName() << " || "
 int ClientTable::GetInfoClient(string name) // получить инфу о клиенте по имени жильца
 {
     int Sum;
-    string Num, Serv, Mas, DT, DS, comm;
+    string Num, Serv, Mas, DT, comm;
+    float DS;
     iter = setPtrsClients.begin();
     while (iter != setPtrsClients.end())
 {
@@ -60,7 +61,7 @@ int ClientTable::GetInfoClient(string name) // получить инфу о кл
 {
 // если получившаяся пара совпадает - значит,
 //мы нашли запись об этом жильце в списке, в этом случае
-cout << name << "||" << Num << "||" << Serv << "||" << Mas << "||" << DT << "||" <<DS << "||" <<Sum <<  "||" <<comm;
+cout << name << "||" << Num << "||" << Serv << "||" << Mas << "||" << DT << "||" <<DS <<  "||" <<comm;
 }
 iter++;
 }

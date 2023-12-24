@@ -2,29 +2,31 @@
 #include "incomehead.h"
 using namespace std;
 
-Income::Income(string p_ClientName, string p_date, string p_service,
-               string p_master, float p_amount)
+Income::Income(string n, string Num, string Serv, string Mas, string DT, float DS, string comm)
 {
-    ClientName = p_ClientName;
-    data = p_date;
-    service = p_service;
-    amount = p_amount;
-    master = p_master;
+    ClientName= n;
+    number = Num;
+    service = Serv;
+    master = Mas;
+    data = DT;
+    CostService = DS;
+    comment = comm;
+}
+
+void Income::getInfoIncome(string n, string Num, string Serv, string Mas, string DT, float DS, string comm)
+{
+    ClientName= n;
+    number = Num;
+    service = Serv;
+    master = Mas;
+    data = DT;
+    CostService = DS;
+    comment = comm;
 }
 
 float Income::getAmount()   //метод для возврата суммы дохода
 {
-    return amount;
-}
-
-void Income::getInfoIncome(string& p_ClientName, string& p_date, string& p_service,                             //метод для возврата
-                           string& p_master, float& p_amount)
-{
-    ClientName = p_ClientName;
-    data = p_date;
-    service = p_service;
-    amount = p_amount;
-    master = p_master;
+    return CostService;
 }
 
 string Income::getClientName()

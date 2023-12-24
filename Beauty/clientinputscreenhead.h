@@ -9,6 +9,7 @@ class ClientInputScreen
 {
 private:
     ClientTable* ptrClientTable;
+    IncomeTable* ptrIncomeTable;
     string ClientName; // имя клиента
     string number; // номер телефона клиента
     string service;// услуга
@@ -17,7 +18,7 @@ private:
     string CostService; //дата оказания услуги
     string comment;// доп.комментарий
 public:
-    ClientInputScreen(ClientTable* ptrCT); //: ptrClientTable(ptrCT)
+    ClientInputScreen(ClientTable* ptrCT, IncomeTable *ptrIn); //: ptrClientTable(ptrCT)
     //{
     /* тут пусто */
     //}

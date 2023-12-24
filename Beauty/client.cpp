@@ -5,7 +5,7 @@ using namespace std;
 
 //методы класса Client
 //в конструкторе задаём имя клиента и остальную информацию
-Client::Client(string n, string Num, string Serv, string Mas, string DT, string DS, string comm)   //конструктор
+Client::Client(string n, string Num, string Serv, string Mas, string DT, float DS, string comm)   //конструктор
 {
     ClientName= n;
     number = Num;
@@ -48,7 +48,7 @@ string Client::getData() //
 return data;
 }
 //--------------------------------------------------------
-string Client::getCostService() //
+float Client::getCostService() //
 {
 return CostService;
 }
