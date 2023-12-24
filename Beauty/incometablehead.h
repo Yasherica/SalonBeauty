@@ -1,24 +1,28 @@
-#ifndef INCOMETABLEHEAD
-#define INCOMETABLEHEAD
+#ifndef INCOMERECORD_H
+#define INCOMERECORD_H
 
-#include "incomehead.h"
-//класс IncomeTable — список всех доходов
-//Он содержит множество указателей на класс Client
-class IncomeTable
+#include <string>
+#include <vector>
+#include <incomehead.h>
+
+using namespace std;
+
+class IncomeTable                      //Класс записей о доходах
 {
 private:
-// установить указатели на клиентов
-list <Income*> setPtrsIncome; // указатели на класс клиентов
-list <Income*>::iterator iter; //итератор
+    vector<Income*>vectPtrsIncome;      //вектор указателей на доходы
+    vector<Income*>::iterator iter;     //итератор для вектора указателей
 public:
-~IncomeTable(); // деструктор (удаление клиентов)
-void InsertIncome(Income*); // добавить клиента в список
-string GetServiceIncome(string);
-string CostServiceIncome(string);
-string GetDateIncome(string);
-float GetSumIncomeDisplay();
-void DisplayIncome(); // вывод списка клиента
+    ~IncomeTable();                    //деструктор
+    void insertInc(Income* ptrIncome);     //добавляем доходы в вектор
+    void display();                     //распечатываем сумму доходов
+    float displaySummary();             //используется при составлении годового отчета
+    string getClientName();
+    string getService();
+    string getData();
+    string getMaster();
+    float getAmount();
+
 };
 
-#endif // INCOMETABLEHEAD
-
+#endif // INCOMERECORD_H

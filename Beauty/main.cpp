@@ -1,8 +1,12 @@
 #include <iostream>
+#include "userinterfacehead.h"
 
-using namespace std;
+int main() {
 
-int main()
-{
+    UserInterface theUserInterface;
+    theUserInterface.interact();
+    system ("pause");
+    return 0;
 
 }
+

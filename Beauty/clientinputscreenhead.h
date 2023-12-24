@@ -1,33 +1,28 @@
-#ifndef CLIENTINPUTSCREENHEAD
-#define CLIENTINPUTSCREENHEAD
+#ifndef CLIENTINPUTSCREENHEAD_H
+#define CLIENTINPUTSCREENHEAD_H
 
 #include "clienttablehead.h"
-#include "masterlisthead.h"
-#include "servicelisthead.h"
+#include "incometablehead.h"
 
-////////////////класс ClientInputScreen////////////////////
-//класс ClientInputScreen. Это класс, отвечающий за отображение «экрана»,
-//куда пользователь может ввести данные о новом клиенте:
+//класс ClientInputScreen. Это класс, отвечающий за отображение «экрана».
 class ClientInputScreen
 {
 private:
-ClientList* ptrClientList;
-string CName;
-string Number;
-string Service;
-string Master;
-string Comment;
-int Data;
-int Sum;
-int aptNo;
-
+    ClientTable* ptrClientTable;
+    string ClientName; // имя клиента
+    string number; // номер телефона клиента
+    string service;// услуга
+    string master;// мастер
+    string data;// дата записи
+    string CostService; //дата оказания услуги
+    string comment;// доп.комментарий
 public:
-ClientInputScreen(ClientList* ptrCL) : ptrClientList(ptrCL)
-{
-/* тут пусто */
-}
-void setClient(); // добавление данных о клиенте
+    ClientInputScreen(ClientTable* ptrCT); //: ptrClientTable(ptrCT)
+    //{
+    /* тут пусто */
+    //}
+    void setClient(); // добавление данных о клиенте
 };
 
-#endif // CLIENTINPUTSCREENHEAD
+#endif // CLIENTINPUTSCREENHEAD_H
 
