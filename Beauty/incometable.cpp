@@ -67,6 +67,7 @@ float IncomeTable::displaySummary()                   // используетс�
     iter = vectPtrsIncome.begin();
     while (iter != vectPtrsIncome.end())
     {
+        cout << '\t' << "service" << '\t' << "master" << '\t' << "cost" << endl;
         cout << '\t' << ((*iter)->getService()) << '\t' << ((*iter)->getMaster()) << '\t' << ((*iter)->getAmount()) << endl;
         totalIncomes += (*iter)->getAmount();          // подсчитываем все доходы
         iter++;
